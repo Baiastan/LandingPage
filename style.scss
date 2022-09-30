@@ -2,6 +2,8 @@
   background-image: $image;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 @mixin btnPrime() {
@@ -43,7 +45,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 70px 500px 300px 500px 500px 500px 500px 270px 180px;
+  grid-template-rows: 70px 500px 400px 500px 500px 500px 500px 270px 180px;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -56,7 +58,7 @@ body {
 
 .grid,
 .main-area {
-  border: 1px solid black;
+  //border: 1px solid black;
   text-align: center;
 }
 //header-top section
@@ -90,8 +92,7 @@ body {
   }
 
   .header-content {
-    width: 40%;
-    min-width: 30rem;
+    width: 60%;
     max-width: 50rem;
   }
 
@@ -108,22 +109,80 @@ body {
 
 .services {
   grid-area: 3 / 1 / span 1 / span 2;
-  background-color: yellow;
+
+  .service-item {
+    padding-top: 5%;
+
+    span {
+      display: inline-block;
+      width: 70%;
+      height: 60%;
+      max-width: 260px;
+      min-width: 240px;
+
+      &:hover .icons {
+        font-size: 75px;
+      }
+    }
+  }
+
+  .icons {
+    font-size: 70px;
+    color: #007bff;
+  }
 }
 
 //main area photos and text section
+
+.photo1 {
+  @include background-image(url(https://www.pictureframesexpress.co.uk/blog/wp-content/uploads/2020/05/7-Tips-to-Finding-Art-Inspiration-Header-1024x649.jpg));
+}
+
+.photo2 {
+  @include background-image(url(https://static.boredpanda.com/blog/wp-content/uploads/2017/02/IMG_20170205_220039_508-58a0129a23ada__880.jpg));
+}
+
+.photo3 {
+  @include background-image(url(https://dza2a2ql7zktf.cloudfront.net/binaries-cdn/dqzqcuqf9/image/fetch/ar_16:10,q_auto:best,dpr_3.0,c_fill,w_380/https://d2u3kfwd92fzu7.cloudfront.net/asset/cms/Art_Basel_Hong_Kong_2022_Lead_Image_2-2-1.jpg));
+}
+
+.text-area {
+  height: 100%;
+  text-align: left;
+  padding-left: 50px;
+  padding-right: 20px;
+  padding-top: 15%;
+
+  h2 {
+    font-size: 2.2rem;
+  }
+  p {
+    font-size: 18px;
+  }
+}
 
 //comments section
 
 .comments {
   grid-area: 7 / 1 / span 1 / span 2;
-  background-color: yellow;
-
   .comment-header {
     flex: 100%;
-    border: 1px solid red;
+    font-size: 25px;
     height: 60px;
     box-sizing: border-box;
+    margin-top: 60px;
+  }
+
+  .comment-item img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .comment-item {
+    padding: 3% 60px 20px 60px;
+    max-width: 370px;
   }
 }
 
@@ -132,13 +191,68 @@ body {
 .register-area {
   grid-area: 8 / 1 / span 1 / span 2;
   background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include background-image(url(https://img.freepik.com/premium-vector/painted-background-multicoloured-palette_23-2148427592.jpg?w=2000));
+  button {
+    @include btnPrime();
+    width: 20%;
+  }
+
+  .header-content {
+    width: 60%;
+    max-width: 50rem;
+  }
+
+  input {
+    @include inputPrime();
+  }
+  h1 {
+    color: white;
+    font-size: 2.5rem;
+  }
 }
 
 //footer section
 
 .footer {
   grid-area: 9 / 1 / span 1 / span 2;
-  background-color: azure;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .social-icons {
+    font-size: 30px;
+    color: #007bff;
+  }
+
+  .privacy {
+    text-align: left;
+
+    p {
+      color: grey;
+      font-size: 14px;
+      line-height: 0;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+
+    padding-left: 0px;
+
+    a {
+      text-decoration: none;
+      color: #007bff;
+    }
+    li {
+      padding: 8px;
+    }
+  }
 }
 
 //flex-container
@@ -152,21 +266,17 @@ body {
   box-sizing: border-box;
 
   .flex-item-holder {
-    border: 1px solid black;
-    background-color: bisque;
-    width: 20%;
+    width: 25%;
     height: 100%;
     text-align: center;
-    padding: 10px;
     box-sizing: border-box;
   }
 }
 
 //media section
 
-@media screen and (max-width: 1010px) {
+@media only screen and (max-width: 1010px) {
   .signup-area {
-    border: 1px solid red;
     align-items: center;
 
     input {
@@ -182,25 +292,22 @@ body {
   }
   .header-content {
     width: 100%;
-    border: 1px solid green;
+    min-width: 30rem;
   }
 
   .three-element-flex-container {
     flex-direction: column;
     flex-wrap: nowrap;
-    background-color: chartreuse;
+
     padding: 20px 0;
 
     .flex-item-holder {
-      border: 1px solid blue;
       min-height: 300px;
       width: 100%;
       min-width: 211px;
-      background-color: blanchedalmond;
     }
 
     .comment-header {
-      border: 1px solid blue;
       height: 60px;
       box-sizing: border-box;
     }
@@ -223,6 +330,17 @@ body {
       "text3";
   }
 
+  //services area
+  .services {
+    .service-item {
+      padding-top: 10%;
+      span {
+        height: 70%;
+      }
+    }
+  }
+
+  //Photo - Area
   .photo1 {
     grid-area: photo1;
   }
@@ -231,5 +349,61 @@ body {
   }
   .photo2 {
     grid-area: photo2;
+  }
+
+  .text2 {
+    grid-area: text2;
+  }
+  .photo3 {
+    grid-area: photo3;
+  }
+  .text3 {
+    grid-area: text3;
+  }
+
+  //Text-Area
+  .text-area {
+    height: 100%;
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 10%;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .comment-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    //  justify-content: space-around;
+
+    .privacy {
+      text-align: center;
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .header-top {
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  .header {
+    box-sizing: border-box;
+  }
+  .header-content {
+    min-width: 25rem;
+    width: 90%;
+
+    h1 {
+      font-size: 1.5rem;
+    }
   }
 }
