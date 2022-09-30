@@ -1,0 +1,235 @@
+@mixin background-image($image) {
+  background-image: $image;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin btnPrime() {
+  color: #fff;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  padding: 10px 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    background-color: #0264cd;
+  }
+  &:active {
+    border: 2px solid lightblue;
+  }
+}
+
+@mixin inputPrime() {
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  font-size: 1.2rem;
+  width: 50%;
+  margin-right: 10px;
+
+  &:active {
+    border: 2px solid lightblue;
+  }
+}
+
+body {
+  margin: 0px;
+}
+
+//grid container
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 500px 300px 500px 500px 500px 500px 270px 180px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#main-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 500px 500px 500px;
+  text-align: center;
+}
+
+.grid,
+.main-area {
+  border: 1px solid black;
+  text-align: center;
+}
+//header-top section
+.header-top {
+  grid-area: 1 / 1 / span 1 / span 2;
+  display: flex;
+  justify-content: space-around;
+
+  align-items: center;
+  button {
+    @include btnPrime();
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+}
+
+//header section
+
+.header {
+  grid-area: 2 / 1 / span 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include background-image(url(https://img.freepik.com/premium-vector/painted-background-multicoloured-palette_23-2148427592.jpg?w=2000));
+  button {
+    @include btnPrime();
+    width: 20%;
+  }
+
+  .header-content {
+    width: 40%;
+    min-width: 30rem;
+    max-width: 50rem;
+  }
+
+  input {
+    @include inputPrime();
+  }
+  h1 {
+    color: white;
+    font-size: 2.5rem;
+  }
+}
+
+//services section
+
+.services {
+  grid-area: 3 / 1 / span 1 / span 2;
+  background-color: yellow;
+}
+
+//main area photos and text section
+
+//comments section
+
+.comments {
+  grid-area: 7 / 1 / span 1 / span 2;
+  background-color: yellow;
+
+  .comment-header {
+    flex: 100%;
+    border: 1px solid red;
+    height: 60px;
+    box-sizing: border-box;
+  }
+}
+
+//register section
+
+.register-area {
+  grid-area: 8 / 1 / span 1 / span 2;
+  background-color: red;
+}
+
+//footer section
+
+.footer {
+  grid-area: 9 / 1 / span 1 / span 2;
+  background-color: azure;
+}
+
+//flex-container
+
+.three-element-flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 30px auto;
+  box-sizing: border-box;
+
+  .flex-item-holder {
+    border: 1px solid black;
+    background-color: bisque;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+
+//media section
+
+@media screen and (max-width: 1010px) {
+  .signup-area {
+    border: 1px solid red;
+    align-items: center;
+
+    input {
+      display: block;
+      width: 100%;
+      margin: 5px auto;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      margin: auto;
+    }
+  }
+  .header-content {
+    width: 100%;
+    border: 1px solid green;
+  }
+
+  .three-element-flex-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: chartreuse;
+    padding: 20px 0;
+
+    .flex-item-holder {
+      border: 1px solid blue;
+      min-height: 300px;
+      width: 100%;
+      min-width: 211px;
+      background-color: blanchedalmond;
+    }
+
+    .comment-header {
+      border: 1px solid blue;
+      height: 60px;
+      box-sizing: border-box;
+    }
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 500px 940px 2400px 0px 0px 980px 270px 180px;
+  }
+  #main-grid-container {
+    grid-template-columns: 100%;
+    grid-template-rows: 500px 300px 500px 300px 500px 300px;
+    grid-template-areas:
+      "photo1"
+      "text1"
+      "photo2"
+      "text2"
+      "photo3"
+      "text3";
+  }
+
+  .photo1 {
+    grid-area: photo1;
+  }
+  .text1 {
+    grid-area: text1;
+  }
+  .photo2 {
+    grid-area: photo2;
+  }
+}

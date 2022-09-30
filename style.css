@@ -1,0 +1,288 @@
+body {
+  margin: 0px;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 70px 500px 300px 500px 500px 500px 500px 270px 180px;
+      grid-template-rows: 70px 500px 300px 500px 500px 500px 500px 270px 180px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#main-grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 500px 500px 500px;
+      grid-template-rows: 500px 500px 500px;
+  text-align: center;
+}
+
+.grid,
+.main-area {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.header-top {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 1 / span 1 / span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-top button {
+  color: #fff;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  padding: 10px 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header-top button:hover {
+  background-color: #0264cd;
+}
+
+.header-top button:active {
+  border: 2px solid lightblue;
+}
+
+.header-top h4 {
+  font-size: 24px;
+}
+
+.header {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 2 / 1 / span 1 / span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url(https://img.freepik.com/premium-vector/painted-background-multicoloured-palette_23-2148427592.jpg?w=2000);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header button {
+  color: #fff;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  padding: 10px 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 20%;
+}
+
+.header button:hover {
+  background-color: #0264cd;
+}
+
+.header button:active {
+  border: 2px solid lightblue;
+}
+
+.header .header-content {
+  width: 40%;
+  min-width: 30rem;
+  max-width: 50rem;
+}
+
+.header input {
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  font-size: 1.2rem;
+  width: 50%;
+  margin-right: 10px;
+}
+
+.header input:active {
+  border: 2px solid lightblue;
+}
+
+.header h1 {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.services {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 3 / 1 / span 1 / span 2;
+  background-color: yellow;
+}
+
+.comments {
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 7 / 1 / span 1 / span 2;
+  background-color: yellow;
+}
+
+.comments .comment-header {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  border: 1px solid red;
+  height: 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.register-area {
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 8 / 1 / span 1 / span 2;
+  background-color: red;
+}
+
+.footer {
+  -ms-grid-row: 9;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 9 / 1 / span 1 / span 2;
+  background-color: azure;
+}
+
+.three-element-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.three-element-flex-container .flex-item-holder {
+  border: 1px solid black;
+  background-color: bisque;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 1010px) {
+  .signup-area {
+    border: 1px solid red;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .signup-area input {
+    display: block;
+    width: 100%;
+    margin: 5px auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .signup-area button {
+    width: 100%;
+    margin: auto;
+  }
+  .header-content {
+    width: 100%;
+    border: 1px solid green;
+  }
+  .three-element-flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    background-color: chartreuse;
+    padding: 20px 0;
+  }
+  .three-element-flex-container .flex-item-holder {
+    border: 1px solid blue;
+    min-height: 300px;
+    width: 100%;
+    min-width: 211px;
+    background-color: blanchedalmond;
+  }
+  .three-element-flex-container .comment-header {
+    border: 1px solid blue;
+    height: 60px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 50px 500px 940px 2400px 0px 0px 980px 270px 180px;
+        grid-template-rows: 50px 500px 940px 2400px 0px 0px 980px 270px 180px;
+  }
+  #main-grid-container {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 500px 300px 500px 300px 500px 300px;
+        grid-template-rows: 500px 300px 500px 300px 500px 300px;
+        grid-template-areas: "photo1" "text1" "photo2" "text2" "photo3" "text3";
+  }
+  .photo1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: photo1;
+  }
+  .text1 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: text1;
+  }
+  .photo2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: photo2;
+  }
+}
+/*# sourceMappingURL=style.css.map */
