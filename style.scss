@@ -85,7 +85,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @include background-image(url(https://img.freepik.com/premium-vector/painted-background-multicoloured-palette_23-2148427592.jpg?w=2000));
+  @include background-image(url(background.jpeg));
   button {
     @include btnPrime();
     width: 20%;
@@ -135,15 +135,21 @@ body {
 //main area photos and text section
 
 .photo1 {
-  @include background-image(url(https://www.pictureframesexpress.co.uk/blog/wp-content/uploads/2020/05/7-Tips-to-Finding-Art-Inspiration-Header-1024x649.jpg));
+  @include background-image(
+    url(7-Tips-to-Finding-Art-Inspiration-Header-1024x649.jpeg)
+  );
 }
 
 .photo2 {
-  @include background-image(url(https://static.boredpanda.com/blog/wp-content/uploads/2017/02/IMG_20170205_220039_508-58a0129a23ada__880.jpg));
+  @include background-image(
+    url(IMG_20170205_220039_508-58a0129a23ada__880.jpeg)
+  );
 }
 
 .photo3 {
-  @include background-image(url(https://dza2a2ql7zktf.cloudfront.net/binaries-cdn/dqzqcuqf9/image/fetch/ar_16:10,q_auto:best,dpr_3.0,c_fill,w_380/https://d2u3kfwd92fzu7.cloudfront.net/asset/cms/Art_Basel_Hong_Kong_2022_Lead_Image_2-2-1.jpg));
+  @include background-image(
+    url(Art_Basel_Hong_Kong_2022_Lead_Image_2-2-1.jpeg)
+  );
 }
 
 .text-area {
@@ -195,7 +201,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @include background-image(url(https://img.freepik.com/premium-vector/painted-background-multicoloured-palette_23-2148427592.jpg?w=2000));
+  @include background-image(url(background.jpeg));
   button {
     @include btnPrime();
     width: 20%;

@@ -53,7 +53,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(https://img.freepik.com/premium-vector/painted-background-multicoloured-palette_23-2148427592.jpg?w=2000);
+  background-image: url(background.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -118,7 +118,7 @@ body {
 }
 
 .photo1 {
-  background-image: url(https://www.pictureframesexpress.co.uk/blog/wp-content/uploads/2020/05/7-Tips-to-Finding-Art-Inspiration-Header-1024x649.jpg);
+  background-image: url(7-Tips-to-Finding-Art-Inspiration-Header-1024x649.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -126,7 +126,7 @@ body {
 }
 
 .photo2 {
-  background-image: url(https://static.boredpanda.com/blog/wp-content/uploads/2017/02/IMG_20170205_220039_508-58a0129a23ada__880.jpg);
+  background-image: url(IMG_20170205_220039_508-58a0129a23ada__880.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -134,7 +134,7 @@ body {
 }
 
 .photo3 {
-  background-image: url(https://dza2a2ql7zktf.cloudfront.net/binaries-cdn/dqzqcuqf9/image/fetch/ar_16:10,q_auto:best,dpr_3.0,c_fill,w_380/https://d2u3kfwd92fzu7.cloudfront.net/asset/cms/Art_Basel_Hong_Kong_2022_Lead_Image_2-2-1.jpg);
+  background-image: url(Art_Basel_Hong_Kong_2022_Lead_Image_2-2-1.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -183,7 +183,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(https://img.freepik.com/premium-vector/painted-background-multicoloured-palette_23-2148427592.jpg?w=2000);
+  background-image: url(background.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
